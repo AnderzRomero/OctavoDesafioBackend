@@ -1,5 +1,6 @@
 import jwt from 'jsonwebtoken';
 import config from '../config/config.js';
+import { generateProduct } from '../mocks/products.js'
 
 const createUser = async (req, res) => {
     res.clearCookie('cart');
@@ -83,6 +84,6 @@ export default {
     infoUser,
     loginTercerosGitHub,
     loginTercerosGoogle,
-    logout
+    logout,
 }
 

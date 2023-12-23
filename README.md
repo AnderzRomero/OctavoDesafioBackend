@@ -3,7 +3,7 @@ Este es un proyecto de ecommerce básico que se utiliza para el curso de Program
 
 ## Tecnologías utilizadas
 - Node.JS   ----->  `npm init -y` 
-- Paquetes a instalar de npm   ----->  `npm install express express-handlebars nodemon mongoose multer dotenv mongoose-paginate-v2 cookie-parser express-session connect-mongo bcrypt passport passport-local passport-github2 jsonwebtoken passport-jwt passport-google-oauth20 @google-cloud/storage socket.io commander`
+- Paquetes a instalar de npm   ----->  `npm install express express-handlebars nodemon mongoose multer dotenv mongoose-paginate-v2 cookie-parser express-session connect-mongo bcrypt passport passport-local passport-github2 jsonwebtoken passport-jwt passport-google-oauth20 @google-cloud/storage socket.io commander @faker-js/faker`
 
 ## Funcionalidades
 ### algunas desde el Frontend y otras desde POSTMAN
@@ -21,13 +21,13 @@ Este es un proyecto de ecommerce básico que se utiliza para el curso de Program
 > 2. Abre una terminal en el directorio del proyecto.
 > 3. Ejecuta el comando `npm init -y` para generar los paquetes del proyecto.
 > 4. realizar el siguiente cambio en nuestro `package.json`: 
-    `"main": "./src/app.js",
+    "main": "./src/app.js",
     "type": "module",
     "scripts": {
         "start": "node src/app.js",
         "dev": "nodemon src/app.js --mode dev",
         "test": "echo \"Error: no test specified\" && exit 1"
-        },`
+        },
 > 4. Ejecuta el comando `npm install express express-handlebars nodemon mongoose multer dotenv mongoose-paginate-v2 cookie-parser commander connect-mongo bcrypt passport passport-local passport-jwt passport-github2 jsonwebtoken` para instalar las dependencias necesarias para el funcionamiento.
 > 5. Ejecuta el comando `npm run dev`  para iniciar la aplicación.
 > 7. Abre tu navegador y navega a http://localhost:8080 para ver la aplicación en acción.

@@ -25,17 +25,16 @@ app.use(cookieParser());
 
 //configuracion de handlebars
 const hbs = exphbs.create({
-    helpers: 
+    helpers:
     {
-        sumPrice: function (products) 
-        {
+        sumPrice: function (products) {
             let total = 0;
             for (const product of products) {
                 total += product._id.price * product.quantity;
             }
             return total;
         },
-        subtotal: function(value1, value2){
+        subtotal: function (value1, value2) {
             return value1 * value2;
         }
     }
@@ -54,3 +53,8 @@ app.use("/", viewsRouter);
 app.use("/api/products", productsRouter);
 app.use("/api/carts", cartsRouter);
 app.use('/api/sessions', SessionsRouter);
+
+app.use((error, req, res, next) => {
+    console.log(error);
+    res.status(500).send("Error del Servidor");
+});

@@ -1,7 +1,6 @@
 
 const executePolicies = (policies) => {
-    return (req, res, next) => {
-        console.log(req.user);
+    return (req, res, next) => {        
         if (policies[0] === "PUBLIC") return next();
         if (policies[0] === "NO_AUTH" && !req.user) return next();
         if (policies[0] === "NO_AUTH" && req.user) return res.sendUnauthorized("Ya estas Autenticado");

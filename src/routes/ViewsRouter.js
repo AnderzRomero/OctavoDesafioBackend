@@ -1,5 +1,6 @@
 import BaseRouter from "./BaseRouter.js";
 import usersControllers from "../controllers/users.controllers.js";
+import productsControllers from "../controllers/products.controllers.js";
 
 class ViewsRouter extends BaseRouter {
   init() {
@@ -11,6 +12,8 @@ class ViewsRouter extends BaseRouter {
     this.get('/profile', ['AUTH'], usersControllers.profile);
     // EndPoint para traer todos los productos
     this.get('/', ['PUBLIC'], usersControllers.getproducts);
+    //Endpoint para el Mocking de productos
+    this.get('/mockingproducts', ['PUBLIC'], productsControllers.mockProducts);
   }
 }
 
