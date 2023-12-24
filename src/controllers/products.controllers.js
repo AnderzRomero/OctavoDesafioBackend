@@ -2,6 +2,7 @@ import { productsService } from "../services/index.js";
 import { getValidFilters } from "../utils.js";
 import { generateProduct } from "../mocks/products.js";
 import CloudStorageService from "../services/CloudStorageService.js";
+import ErrorsDictionary from "../dictionaries/errors.js";
 
 const getproducts = async (req, res, next) => {
     try {
